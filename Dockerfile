@@ -11,4 +11,4 @@ RUN apt-get install -y bind9
 RUN mkdir /usr/data
 RUN rm -rf /etc/bind
 
-CMD cp -r /usr/data/bind/ /etc/ && cp -r /usr/data/bind/ /etc/
+CMD cp -r /usr/data/bind/ /etc/ && /usr/sbin/named -u bind -g
