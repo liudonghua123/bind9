@@ -3,9 +3,11 @@
 #from ubuntu
 FROM thiswind/ubuntu
 
-RUN sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 16126D3A3E5C1192
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update && apt-get install -y bind9
+
+RUN sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 16126D3A3E5C1192
+RUN apt-get update 
+RUN apt-get install -y bind9
 RUN mkdir /usr/data
 RUN rm -rf /etc/bind
 
