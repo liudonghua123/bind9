@@ -9,6 +9,6 @@ ENV DEBIAN_FRONTEND noninteractive
 #RUN apt-get update 
 RUN apt-get install -y bind9
 RUN mkdir -p /usr/data
-RUN rm -rf /etc/bind
+RUN rm -rf /etc/bind && mkdir /etc/bind
 
-CMD cp -r /usr/data/bind/ /etc/ && chown bind:bind /etc/bind/* && /usr/sbin/named -u bind -g
+CMD cp /usr/data/* /etc/bind/ && chown bind:bind /etc/bind/* && /usr/sbin/named -u bind -g
