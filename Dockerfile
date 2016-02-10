@@ -1,12 +1,14 @@
-#Dockerfile
+# My own Bind9
 
-#from ubuntu
-FROM thiswind/ubuntu
+FROM thiswind/ubuntu:12.04
 
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get install -y bind9
-RUN mkdir -p /usr/data
-RUN rm -rf /etc/bind && mkdir /etc/bind
+ADD sources.list /etc/apt
+RUN apt-get update && apt-get -y install bind9 dnsutils openssh-client
 
-CMD cp /usr/data/* /etc/bind/ && chown bind:bind /etc/bind/* && /usr/sbin/named -u bind -g
+ADD bind /etc/bind
+
+EXPOSE 53
+
+CMD ["/usr/sbin/named", "-u", "bind", "-g", "-d", "3"]
