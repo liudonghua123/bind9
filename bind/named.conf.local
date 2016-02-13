@@ -8,3 +8,4 @@
 
 zone "zp.com" {type master; file "/etc/bind/db.zp.com";};
 zone "ynu.edu.cn" {type master; file "/etc/bind/db.ynu.edu.cn";};
+zone "thiswind.info" {type master; file "/etc/bind/db.thiswind.info";};
