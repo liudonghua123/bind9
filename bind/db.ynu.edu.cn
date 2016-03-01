@@ -1,6 +1,6 @@
 $TTL 86400      ; 1 day
 @       IN      SOA     pridns.ynu.edu.cn. root.pridns.ynu.edu.cn. (
-                                2016011301    ;   serial number
+                                2016022803    ;   serial number
                                 10800   ;   Refresh interval, every 3 hours
                                 3600    ;   Retry interval, every 30 minutes 
                                 604800  ;   Expire after 1 week
@@ -10,8 +10,10 @@ $TTL 86400      ; 1 day
         IN      MX      10      webmail.ynu.edu.cn.
 
 mail.ynu.edu.cn.   MX      10       webmail.ynu.edu.cn.
+;yn.edu.cn.         MX      10       webmail.ynu.edu.cn.
 sei.ynu.edu.cn.    MX      10       webmail.ynu.edu.cn.
 alumnu.ynu.edu.cn.  MX      10       webmail.ynu.edu.cn.
+;stu             IN      MX      15   1826300652.pamx1.hotmail.com.
 stu             IN      MX      15   1826300652.mail.outlook.com.
 sse             IN      MX      20   71892d7f2309e64ba6aa36cf20484a.mail.outlook.com.
 
@@ -22,16 +24,25 @@ secdns           IN      AAAA   2001:250:2800:2::34
 webmail          IN      A      202.203.208.32
 webmail          IN      AAAA   2001:250:2800:2::32
 
+;www.network     IN      A       202.203.128.31
+;network         IN      CNAME   www.network
+
+;www.weinfo      IN      A       113.55.4.58
 
 dcxy            IN      A       222.19.194.100
+;dcxy            IN      A       220.163.118.139
 www.dcxy        IN      CNAME   dcxy
 
 YNU.local        IN      A       222.19.199.11
+;www.bts          IN      A       222.19.200.27
+;bts              IN      CNAME   www.bts
+;www.emba         IN      A       222.19.236.3
 airc            IN      A       222.19.201.5
 www.congatg        IN      A       222.19.211.101
 
 www.ic          IN      A       202.203.32.10
 ic              IN      CNAME   www.ic
+;www.bioinfo     IN      A       202.203.33.2
 www.winlab        IN       A         202.203.33.92
 www.lnic          IN       A         202.203.36.9
 www.ect         IN      A       202.203.36.8
@@ -46,6 +57,7 @@ www.yunwei      IN      AAAA   2001:250:2800:15::80
 
 www.sys         IN      A       202.203.34.18
 
+;xin xi xue yuan
 www.sise               IN      A       202.203.208.92
 www.vldbsummerschool   IN      CNAME   www.sise
 www.cs.sise            IN      A       202.203.40.132
@@ -53,27 +65,36 @@ www.aec.sise           IN      CNAME   www.cs.sise
 www.labcenter.sise     IN      A       202.203.40.133
 
 www.et          IN      A       113.55.11.248
+;www.mpa         IN      A       202.203.46.160
 www.fec         IN      A       202.203.47.2
 
-www.ieg         IN      A       222.19.211.112
+;www.ieg         IN      A       222.19.211.112
 www.open        IN      A       202.203.213.28
+;www.rdrc        IN      A       202.203.218.4
 www.jdfa         IN      A       202.203.222.213
 www.flower       IN      CNAME   www.jdfa
 www.xnmzyj       IN      CNAME   www.jdfa
 www.lib          IN      A       202.203.222.218
+;www.ydxsc        IN      A       202.203.222.217
 
 www.intl         IN      A       106.187.96.233
 
 ;--------------------------------------202.203.209----------------------------------------------
 nwebdb          IN      A       202.203.209.3
+;nwebserver       IN      A       202.203.209.4
 nwebshow         IN      A       202.203.209.5
+;nwebapp          IN      A       202.203.209.6
+;seimis		IN 	A	202.203.209.13 
 ynumis          IN      A       202.203.209.15
+;ngapi           IN      A       202.203.209.249
 fc                IN      A       202.203.209.4
 vdc               IN      A       202.203.209.6
 graduate.sei     IN      A       202.203.209.13
 www.xbzx        IN      CNAME	nginx
 www.summer      IN      CNAME   www.xbzx
 www.mzyjy       IN      CNAME   www.xbzx
+;play.api          IN      A       202.203.209.83
+;jy.apps           IN      A       202.203.209.82
 mysql.db          IN      A       202.203.209.233
 ms.db             IN      A       202.203.209.227
 
@@ -81,10 +102,14 @@ mongo		IN	A	202.203.209.52
 www.liuxue	IN	A	202.203.209.209
 ;--------------------------------------202.203.209----------------------------------------------
 
+;portal           IN      A       202.203.208.3
+;portal           IN      AAAA    2001:250:2800:2::11
+
 ynu4            IN      A       202.203.208.4
 ynu5            IN      A       202.203.208.5
 ynu6            IN      A       202.203.208.6
 ynu7            IN      A       202.203.208.7
+;ynu8            IN      A       202.203.208.8
 ynu9            IN      A       202.203.208.9
 ynu10           IN      A       202.203.208.10
 ynu11         IN      A       202.203.208.11
@@ -115,8 +140,8 @@ www.mba         IN      A       202.203.208.27
 www.edp         IN      A       202.203.208.27
 
 ;----------------28--------------------------------
-l.network   IN      A       202.203.208.28
-l.network   IN  AAAA	2001:250:2800:2::28
+l.network		IN      A       202.203.208.28
+l.network		IN	AAAA	2001:250:2800:2::28
 www.ydbg                IN      A   202.203.208.28
 www.ydbg                IN      AAAA   2001:250:2800:2::28
 www.xkjs                IN      A   202.203.208.28
@@ -133,6 +158,8 @@ www.bts                 IN      A   202.203.208.28
 www.bts         IN      AAAA   2001:250:2800:2::28
 www.iep                 IN      A   202.203.208.28
 www.iep                 IN      AAAA   2001:250:2800:2::28
+;www.chem                IN      A   202.203.208.28
+;www.chem                IN      AAAA   2001:250:2800:2::28
 www.law                 IN      A   202.203.208.28
 www.law                 IN      AAAA   2001:250:2800:2::28
 www.hos                 IN      A   202.203.208.28
@@ -223,6 +250,8 @@ www.grs               IN      A   202.203.208.28
 www.grs               IN      AAAA   2001:250:2800:2::28
 www.xxxdzz            IN      A   202.203.208.28
 www.xxxdzz            IN      AAAA   2001:250:2800:2::28
+;www.ydcwc               IN      A   202.203.208.28
+;www.ydcwc               IN      AAAA   2001:250:2800:2::28
 www.ygb                 IN      A   202.203.208.28
 www.ygb                 IN      AAAA   2001:250:2800:2::28
 www.kjkfc                       IN      A   202.203.208.28
@@ -289,6 +318,8 @@ yjhx.col                IN      A   202.203.208.28
 yjhx.col                IN      AAAA   2001:250:2800:2::28
 rxdl.col                IN      A   202.203.208.28
 rxdl.col                IN      AAAA   2001:250:2800:2::28
+;www.seams-km2013        IN      A   202.203.208.28
+;www.seams-km2013        IN      AAAA   2001:250:2800:2::28
 www.dwoffice                IN      A   202.203.208.28
 www.dwoffice                IN      AAAA   2001:250:2800:2::28
 
@@ -360,60 +391,67 @@ www.eelab               IN      A       202.203.208.28
 www.eelab               IN      AAAA    2001:250:2800:2::28
 www.ydtg                IN      A       202.203.208.28
 www.ydtg                IN      AAAA    2001:250:2800:2::28
-urp IN  A   202.203.208.28
-urp IN      AAAA    2001:250:2800:2::28
+urp			IN	A	202.203.208.28
+urp			IN      AAAA    2001:250:2800:2::28
 members.apps            IN      A       202.203.208.28
 members.apps            IN      AAAA    2001:250:2800:2::28
 cg.apps                 IN      A       202.203.208.28
 cg.apps                 IN      AAAA    2001:250:2800:2::28
-sysshzcgjdd IN  A   202.203.208.28
-sysshzcgjdd IN  AAAA    2001:250:2800:2::28
+sysshzcgjdd		IN	A	202.203.208.28
+sysshzcgjdd		IN	AAAA	2001:250:2800:2::28
 ;---------!28---------------------------------------------
 ;---------thiswind segment
-wxweb   IN  A   202.203.208.28
-wxweb   IN  AAAA	2001:250:2800:2::28
+wxweb			IN	A	202.203.208.28
+wxweb			IN	AAAA	2001:250:2800:2::28
 
-cheia2015   IN  A   202.203.208.28
-cheia2015   IN  AAAA    2001:250:2800:2::28
+cheia2015		IN	A	202.203.208.28
+cheia2015		IN	AAAA	2001:250:2800:2::28
 
-www.yim IN  A   202.203.208.28
-www.yim IN  AAAA    2001:250:2800:2::28
+www.yim			IN	A	202.203.208.28
+www.yim			IN	AAAA	2001:250:2800:2::28
 
-fs  IN  A   202.203.209.6
-fm  IN  A   202.203.209.6
-test    IN  A   202.203.209.28
+fs			IN	A	202.203.209.6
+fm			IN	A	202.203.209.6
+test			IN	A	202.203.209.28
 
-docker  IN  A   202.203.209.118
-docker  IN  AAAA    2001:250:2800:2::118
+docker			IN	A	202.203.209.118
+docker			IN	AAAA	2001:250:2800:2::118
 
-mirror.docker   IN  A   202.203.208.15
-mirror.docker   IN  AAAA    2001:250:2800:2::15
+mirror.docker		IN	A	202.203.208.15
+mirror.docker		IN	AAAA	2001:250:2800:2::15
 
-2.pt    IN  A   202.203.209.103
-2.pt    IN  AAAA    2001:250:2800:2::103
+2.pt			IN	A	202.203.209.103
+2.pt			IN	AAAA	2001:250:2800:2::103
 
-welcome IN  A   202.203.208.15
-welcome IN  AAAA    2001:250:2800:2::15
+welcome			IN	A	202.203.208.15
+welcome			IN	AAAA	2001:250:2800:2::15
 
-www.sees    IN      A       202.203.209.51
+www.sees        	IN      A       202.203.209.51
 
+cow			IN	A	202.203.209.122
 
-www.ec  IN  A   202.203.222.214
+www.ec			IN	A	202.203.222.214
 
-mysql   IN  A   202.203.208.15
-mysql   IN  AAAA    2001:250:2800:2::15
+mysql			IN	A	202.203.208.15
+mysql			IN	AAAA	2001:250:2800:2::15
 
-pm.nic  IN  A   202.203.208.15
-pm.nic  IN  AAAA    2001:250:2800:2::15
+pm.nic			IN	A	202.203.208.15
+pm.nic			IN	AAAA	2001:250:2800:2::15
 
-git IN  A   202.203.208.15
+;www.seams-bull-math	IN      A       202.203.208.15
 
-wel IN  A   202.203.208.15
+git			IN	A	202.203.208.15
 
-www.yj  IN  A   202.203.208.28
+wel			IN	A	202.203.208.15
+;yx			IN	A	202.203.208.15
+
+www.yj			IN	A	202.203.208.28
+
+cjcx.yjs		IN	CNAME	nginx
 ;---------end of thiswind segment
 
 
+;ynu29           IN      A       202.203.208.29
 sns           IN      A       202.203.208.30
 sns           IN      AAAA              2001:250:2800:2::30
 ynu31           IN      A       202.203.208.31
@@ -424,10 +462,19 @@ ynu36           IN      A       202.203.208.36
 ;WWW server (temp)zhan qun
 
 web37           IN      A       202.203.208.37
+;WWW server (temp)zhan qun
+;www.inf         IN     CNAME    web37
+;www.museum      IN     CNAME    web37
 www.aec         IN     CNAME    web37
+;www.zj          IN     CNAME    web37
+;www.sise       IN     CNAME    web37
+;www.kjkfc       IN     CNAME    web37
 www.office      IN     CNAME    web37
 www.xbskb       IN     CNAME    web37
+;www.msxy        IN     CNAME    web37
+;www.yuss        IN     CNAME    web37
 ftp             IN     CNAME    web37
+;faq             IN     CNAME    web37
 www.kyc         IN     CNAME    web37
 www.sns          IN     CNAME    web37
 cnc              IN     CNAME    web37
@@ -438,7 +485,9 @@ web39           IN      A       202.203.208.39
 
 ynu40           IN      A       202.203.208.40
 ngapi           IN      A       202.203.208.41
-api IN      A       202.203.208.42
+;www.sees        IN      A       202.203.208.41
+api		IN      A       202.203.208.42
+;api		IN	AAAA	2001:250:2800:2::42
 ynu43           IN      A       202.203.208.43
 www.dxkf           IN      A       202.203.208.44
 ynu45           IN      A       202.203.208.45
@@ -449,6 +498,10 @@ ynu49           IN      A       202.203.208.49
 ynu50           IN      A       202.203.208.50
 
 theol1           IN      A       202.203.208.51
+;elearning        IN      A       202.203.208.52
+;elearning          IN       AAAA        2001:250:2800:2::52
+;zlgc             IN     A    202.203.208.52
+;zlgc               IN      AAAA         2001:250:2800:2::52
 elearning        IN      A       202.203.209.243
 zlgc             IN      A       202.203.209.243
 
@@ -467,17 +520,33 @@ ynu62           IN      A       202.203.208.62
 ynu63           IN      A       202.203.208.63  
 ynu64           IN      A       202.203.208.64  
 ynu65           IN      A       202.203.208.65
+;ynu66           IN      A       202.203.208.66
 www.mbrc         IN     CNAME    ynu66
 gbook.yklp       IN     CNAME    ynu66
+;www.humangenetics  IN     CNAME    ynu66
+;www.eelab         IN     CNAME    ynu66
+;www.labct         IN     CNAME    ynu66
 www.palc          IN     CNAME    ynu66
 www.zjxm          IN     CNAME    ynu66
+;www.yim          IN     CNAME    ynu66
+;www.jclab         IN     CNAME    ynu66
+;www.stat          IN     CNAME    ynu66
 www.esoe          IN     CNAME    ynu66
+;www.communicationasculture         IN     CNAME    ynu66
+;www.dhywebpage    IN     CNAME    ynu66
 www.caph          IN     CNAME    ynu66
 www.csyn          IN     CNAME    ynu66
 www.ydjx          IN     CNAME    ynu66
+;www.yj            IN     CNAME    ynu66
 www.ynjd          IN     CNAME    ynu66
+;www.africanstudies  IN      CNAME   ynu66
+;www.whcy         IN     CNAME    ynu66
+;www.sucm          IN     CNAME    ynu66
+;www.scmgb         IN     CNAME    ynu66
 
+;test           IN      A       202.203.208.67
 ynu68            IN      A       202.203.208.68
+;www.scmgb         IN     CNAME    ynu68
 ynu69           IN      A       202.203.208.69
 
 ynu71           IN      A       202.203.208.71
@@ -493,6 +562,10 @@ ynu80           IN      A       202.203.208.80
 ynu81           IN      A       202.203.208.81
 ynu82           IN      A       202.203.208.82
 
+;www.xbzx        IN      A       202.203.208.83
+;www.summer      IN      CNAME   www.xbzx
+;www.mzyjy       IN      CNAME   www.xbzx
+
 www.ymf         IN      A       202.203.208.84
 
 ynu85           IN      A       202.203.208.85
@@ -504,24 +577,30 @@ ynu90           IN      A       202.203.208.90
 ynu91           IN      A       202.203.208.91
 ynu93           IN      A       202.203.208.93
 
+;www.wljx        IN      A       202.203.208.94
+
 ynu95           IN      A       202.203.208.95
 ynu96           IN      A       202.203.208.96
 vcampus           IN      A       202.203.208.97
 ynu98           IN      A       202.203.208.98
 ynu99           IN      A       202.203.208.99
 
+;shool of software
 sei             IN      A       202.203.208.100
 www.sei         IN      CNAME   sei
 ftp.sei         IN      CNAME   sei
 bbs.sei         IN      CNAME   sei
 www.selab       IN      CNAME   sei
 selab           IN      CNAME   sei
+;end of shool of software
 
 ynu101          IN      A       202.203.208.101
+;www.ynchee      IN      CNAME   ynu101
 www.survey      IN     CNAME   ynu101
 music           IN     CNAME   ynu101
 2007.ghsurvey   IN     CNAME   ynu101
 www.toupiao      IN     CNAME   ynu101
+;www.stuhome      IN      CNAME    ynu101
 www.poll        IN      CNAME   ynu101
 jxtd2008        IN      CNAME   ynu101
 www.ynsoft      IN      CNAME   ynu101
@@ -533,10 +612,16 @@ ynu104           IN      A       202.203.208.104
 www.jyzc           IN      A       202.203.208.105
 ynu106           IN      A       202.203.208.106
 
+;graduate.sei     IN      A       202.203.208.109
+;www.netcase      IN      CNAME  graduate.sei
 ynu110           IN      A       202.203.208.110
 www.yndxxb       IN      A       202.203.208.111
 
+;netsecurity     IN      A       202.203.208.112
 celebrate       IN      A       202.203.208.113
+;www.ynumis      IN      A       202.203.208.114
+;ynumis          IN      CNAME   www.ynumis
+;ynumis          IN      A       202.203.208.114
 
 ynu115           IN      A       202.203.208.115
 ynu116           IN      A       202.203.208.116
@@ -546,6 +631,7 @@ ynu119          IN      A       202.203.208.119
 
 www.ynusky           IN      A       202.203.208.120
 www.ecls             IN      CNAME   www.ynusky
+;www.swrq             IN      CNAME   www.ynusky
 www.evolution        IN      CNAME   www.ynusky
 www.swxsx            IN      CNAME   www.ynusky
 
@@ -562,6 +648,7 @@ wsus            IN      CNAME   windowsupdate
 www.train       IN      A       202.203.208.163
 www.itat        IN      CNAME   www.train
 www.80xq        IN      CNAME   www.train 
+;www.pgw        IN      CNAME   www.train
 www.ynsrin      IN      A       202.203.208.164
 
 
@@ -573,6 +660,7 @@ office          IN      CNAME   ynu8
 www.115         IN      CNAME   ynu8
 www.xjxjy       IN      CNAME   ynu8
 www.jgdw        IN      CNAME   ynu8
+;www.ynup        IN      CNAME   ynu8
 netclass        IN      CNAME   ynu8
 photo           IN      CNAME   ynu8
 yjx             IN      CNAME   ynu8
@@ -583,9 +671,14 @@ yangpu          IN      CNAME   ynu8
 yncet           IN      CNAME   ynu8
 www.fls         IN      CNAME   ynu8
 www.research    IN      CNAME   ynu8
+;www.cwc         IN      CNAME   ynu8
+;jxcg            IN      CNAME   ynu8
 
+;www ynu edu cn
 webstar          IN      CNAME   ynu8
 web              IN      CNAME   ynu8
+;vfp.col          IN      CNAME   ynu8
+;www.pic          IN      CNAME   ynu8
 2008.sy          IN      CNAME   ynu8
 wydxh.news       IN      CNAME   ynu8
 gsa              IN      CNAME   ynu8
@@ -612,45 +705,55 @@ bt              IN      AAAA    2001:250:2800:8::201
 
 www.ydyouth     IN      A       113.55.0.221
 ydyouth         IN      CNAME   www.ydyouth
+;student         IN      CNAME   www.ydyouth
 www.stu         IN      CNAME   www.ydyouth
+;www.st          IN      CNAME   www.ydyouth
 www.qingxie     IN      CNAME   www.ydyouth
+;www.nys         IN      CNAME   www.ydyouth
 www.zl          IN      CNAME   www.ydyouth
 
 bbs             IN      A       113.55.0.222
 bbs               IN                    AAAA            2001:250:2800:344:222::1
-cms IN  A   113.55.0.226
-mp  IN      A       113.55.0.227
+cms		IN	A	113.55.0.226
+mp		IN      A       113.55.0.227
 www.ny          IN      CNAME   bbs
+;www.mv          IN      CNAME   bbs
 
 
 
 www.cwc         IN      A       113.55.127.254
 
 ;---------ldh section----------
-www.whfz    IN  A   202.203.208.28
-www.whfz    IN  AAAA    2001:250:2800:2::28
+www.whfz	IN	A	202.203.208.28
+www.whfz	IN	AAAA	2001:250:2800:2::28
 
+;www.bioinfo	IN	A	113.55.96.200
 
-www.ydcwc   IN  A   113.55.127.253
+www.ydcwc	IN	A	113.55.127.253
 
-www.seams-bull-math IN  A   202.203.209.124
+www.seams-bull-math	IN	A	202.203.209.124
 
-www.service IN  A   202.203.208.28
-www.service IN  AAAA    2001:250:2800:2::28
+www.service	IN	A	202.203.208.28	
+www.service	IN	AAAA	2001:250:2800:2::28
 
 ;change ip on 30, Nov 2015
-www.bioinfo IN  A   202.203.40.133
+www.bioinfo	IN	A	202.203.40.133	
 
-lb  IN  A   202.203.209.4
+lb		IN	A	202.203.209.4
 
-ids IN  A   113.55.12.3
-mcp IN  A   113.55.12.16
-yx  IN  A   113.55.12.3
-lx  IN  A   113.55.12.3
-portal  IN  A   113.55.12.3
-employment  IN  A   113.55.12.3
-zs  IN  A   113.55.12.3
-imp IN  A   113.55.12.3
+;resolve yangdongzhuang's domain
+ids		IN	A	113.55.12.3
+mcp		IN	A	113.55.12.16	
+;resolve yangdongzhuang's domain (2015-12-07)
+yx		IN	A	113.55.12.3
+lx		IN	A	113.55.12.3
+;xg		IN	A	113.55.12.3
+;sg		IN	A	113.55.12.3
+portal		IN	A	113.55.12.3
+employment	IN	A	113.55.12.3
+zs		IN	A	113.55.12.3
+;resolve yangdongzhuang's domain (2015-12-15)
+imp		IN	A	113.55.12.3
 zsj		IN	A	113.55.12.3
 xg		IN	A	113.55.12.3
 sg		IN	A	113.55.12.3
