@@ -1,6 +1,6 @@
 $TTL 86400      ; 1 day
 @       IN      SOA     pridns.ynu.edu.cn. root.pridns.ynu.edu.cn. (
-                                2016022803    ;   serial number
+                                2016030302    ;   serial number
                                 10800   ;   Refresh interval, every 3 hours
                                 3600    ;   Retry interval, every 30 minutes 
                                 604800  ;   Expire after 1 week
@@ -8,6 +8,7 @@ $TTL 86400      ; 1 day
         IN      NS      pridns.ynu.edu.cn.
         IN      NS      secdns.ynu.edu.cn.
         IN      MX      10      webmail.ynu.edu.cn.
+	IN	TXT	"MS=ms18922995"
 
 mail.ynu.edu.cn.   MX      10       webmail.ynu.edu.cn.
 ;yn.edu.cn.         MX      10       webmail.ynu.edu.cn.
@@ -773,6 +774,7 @@ wx_ent_profile	IN	CNAME	nginx
 wx_ldh_service	IN	CNAME	nginx
 
 op.itc		IN	CNAME	nginx
+js.learn.itc	IN	CNAME	nginx
 
 ;resolve litong's software institution site domain
 www.nasac2016	IN	A	113.55.4.22
@@ -800,4 +802,13 @@ backup.ssh	IN	A	113.55.12.37
 
 ;resolve domain of baiyang's dev server 
 brealisty	IN	CNAME	nginx
+
+;resolve mail staffs
+smtp		IN	A	202.203.208.32
+pop3		IN	A	202.203.208.32
+imap		IN	A	202.203.208.32
+
+;resolve static pages sites
+pages		IN	CNAME	nginx
+
 ;---------end of ldh section---
