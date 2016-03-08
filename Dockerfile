@@ -7,8 +7,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 ADD sources.list /etc/apt/sources.list
 RUN apt-get update && apt-get -y install bind9 dnsutils openssh-client
 
-ADD bind /etc/bind
+COPY bind /etc/bind
 
 EXPOSE 53/udp
 
-CMD ["/usr/sbin/named", "-u", "bind", "-g", "-d", "1"]
+CMD ["/usr/sbin/named", "-u", "bind", "-g"]
